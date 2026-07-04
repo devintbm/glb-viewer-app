@@ -1,4 +1,6 @@
-const BASE = '/api/models';
+const BASE = `${import.meta.env.VITE_API_URL || ''}/api/models`;
+
+console.log('API BASE IS:', BASE);
 
 async function handle(res) {
   if (!res.ok) {
